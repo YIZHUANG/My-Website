@@ -1,0 +1,70 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.BasicInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  &--name {
+    color: white;
+    font-weight: 700;
+    font-size: 100px;
+    margin: 80px 0 0 20px;
+    text-align: center;
+  }
+  &--title {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    text-align: justify;
+    margin: -20px 0 0 20px;
+    line-height: 1;
+    color: #fff;
+  }
+  &--icons_container {
+    display: flex;
+    margin-top: 5px;
+    z-index: 10;
+    i {
+      font-size: 60px;
+      color: black;
+      margin: 0 40px 40px 0;
+    }
+    i:hover {
+      color: red;
+    }
+  }
+  &--down_container {
+    text-align: center;
+    margin-top: 40px;
+    cursor: pointer;
+    i {
+      font-size: 60px;
+      color: #fff;
+      transform-style: preserve-3d;
+      width: 100px;
+      height: 100px;
+      fill: #fff;
+      animation: pulse 1.3s infinite;
+      display: block;
+      z-index: 10000;
+    }
+    i:hover {
+      color: grey;
+    }
+    i:active {
+      color: grey;
+    }
+  }
+}
