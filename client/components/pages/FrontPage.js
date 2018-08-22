@@ -1,19 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Header from '../Header';
-import TimeLine from '../common/Timeline';
-import Content from '../Content';
+import Header from "../Header";
+import TimeLine from "../common/Timeline";
+import Content from "../Content";
+import ProjectSection from "../ProjectSection";
 
-class FrontPage extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Content />
+const FrontPage = () => {
+  return (
+    <div>
+      <Header />
+      <Content />
+      {typeof window !== "undefined" && window.__PRELOADED_STATE__ ? (
+        <span
+          dangerouslySetInnerHTML={{
+            __html: window.__PRELOADED_STATE__.timeline
+          }}
+        />
+      ) : (
         <TimeLine />
-      </div>
-    );
-  }
-}
+      )}
+      <ProjectSection />
+    </div>
+  );
+};
 
 export default FrontPage;

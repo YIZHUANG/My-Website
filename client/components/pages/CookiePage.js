@@ -21,7 +21,7 @@ class Cookie extends Component {
         <h1>Cookie Policy</h1>
         <p>
           This is the Cookie Policy for Yi's Portfolio site, accessible from
-          http://www.yizhuang.fi
+          https://www.yizhuang.fi
         </p>
         <p>
           <strong>What Are Cookies</strong>
@@ -118,7 +118,7 @@ class Cookie extends Component {
           contact us through one of our preferred contact methods:
         </p>
         <ul>
-          <li>By visiting this link: http://www.yizhuang.fi</li>
+          <li>By visiting this link: https://www.yizhuang.fi</li>
         </ul>
       </div>
     );

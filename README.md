@@ -1,3 +1,3 @@
 ## on-going
 
-[Deployment is here](www.yizhuang.fi).
+[Deployment is here](http://www.yizhuang.fi/).

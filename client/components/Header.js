@@ -17,22 +17,23 @@ export default class Header extends Component {
     super();
     this.state = {
       showCookie: false,
-      particleConfig: RedTheme,
-      showDropDown: false
+      particleConfig: RedTheme
     };
   }
 
   changeTheme(theme, bg) {
-    this.setState({ particleConfig: theme, showDropDown: false });
+    this.setState({ particleConfig: theme });
     const wrapper = document.getElementsByClassName('wrapper')[0];
-    wrapper.style.background = bg;
+    if (wrapper) {
+      wrapper.style.background = bg;
+    }
   }
 
   onScroll() {
     const contentPosition = document
       .getElementsByClassName('description_me')[0]
       .getBoundingClientRect().top;
-    window.scrollTo(0, contentPosition);
+    window.scrollTo(0, contentPosition + window.scrollY);
   }
   render() {
     return (
@@ -48,9 +49,6 @@ export default class Header extends Component {
           }}
         />
         <Buttons
-          onDropDownClick={() =>
-            this.setState({ showDropDown: !this.state.showDropDown })
-          }
           GetCookie={() => GetCookie()}
           onClickThemeChange={() => onClickThemeChange()}
           showDropDown={this.state.showDropDown}

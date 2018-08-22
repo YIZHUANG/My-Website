@@ -86,7 +86,7 @@ const TimeLine = () => {
           <div className="timeline_content">
             <h5>Futurice's FriendShip App</h5>
             <p>
-              A 5-months long Futurice open-source project using React, React
+              A 5-months long Futurice project using React, React
               Native, Nodejs, Postgresql
             </p>
           </div>
